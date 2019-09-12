@@ -21,8 +21,10 @@ public:
     Polynomial(unsigned int);
     void add(unsigned int, float);
     void grado(Polynomial&);
+    void suma_constante(Polynomial&, int c);
     string get_expression(Polynomial& p);
     Polynomial operator + (const Polynomial&);
+    Polynomial operator * (const Polynomial&);
     Polynomial operator +=(const Polynomial&);
 };
 

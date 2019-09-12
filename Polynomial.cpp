@@ -7,7 +7,7 @@
 #include "Polynomial.h"
 
 Polynomial::Polynomial():polinomio{nullptr}, exponente{0}, coeficiente{0} {
-//todos los valores a 0;
+    //todos los valores a 0;
 }
 
 Polynomial::Polynomial(unsigned int j):exponente{j} {
@@ -55,8 +55,26 @@ Polynomial Polynomial::operator+(const Polynomial & p1) {
     return tmp;
 }
 
-Polynomial Polynomial::operator+=(const Polynomial &) {
+Polynomial Polynomial::operator+=(const Polynomial & p1) {
+    Polynomial tmp(p1);
+    for (int i = 0; i < p1.exponente ; ++i) {
+        tmp.polinomio[i] =
+    }
 
+}
+
+void Polynomial::suma_constante(Polynomial & p1, int c) {
+    Polynomial tmp(p1);
+    for (int i = 0; i < p1.exponente; ++i) {
+        polinomio[i] = c * tmp.polinomio[i];//
+    }
+}
+
+Polynomial Polynomial::operator*(const Polynomial & p1) {
+    auto tmp = new Polynomial();
+    for (int i = 0; i < p1.exponente ; ++i) {
+        tmp->polinomio[i] =  tmp->polinomio[i] * this->polinomio[i];
+    }
 }
 
 
